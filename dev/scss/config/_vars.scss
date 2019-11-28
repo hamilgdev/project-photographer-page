@@ -1,0 +1,24 @@
+// map:() paleta de color 
+$vars_colors: (
+  primary : #E8B63B,
+  secondary : #2A00FF,
+  third : #E55C5B,
+);
+
+// variables root:css
+:root {
+  // recorre el map:() vars_colors, y compila las variables nativas css
+  @each $key, $value in $vars_colors {
+    --#{$key}: #{$value};
+  }
+
+}
+
+// Rompedores mediaqueries
+$breakpoints: (
+  xs: 30em, /* 480 / 16  */
+  s: 37.5em, /* 600 / 16  */
+  m: 45em, /* 720 / 16 */
+  l: 64em, /* 1024 / 16 */
+  xl: 75em /* 1200 / 16 */
+);

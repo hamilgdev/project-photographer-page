@@ -1,0 +1,40 @@
+
+// recupera variables root:css y la remplaza segun su propiedad  
+@mixin var($property, $var) {
+  #{$property}: map-get($vars_colors, $var);
+  #{$property}: var(--#{$var})
+}
+/* example apply ruler: 
+  body { 
+    @include var(background-color, secondary);
+  }
+*/
+
+// Mediaqueries
+// Utilizacion 1:  @include mq(m) { font-size: 16px }
+// Utilizacion 2:  @include mq(420px) { font-size: 16px }
+@mixin mq($bp) {
+  @if map-has-key($breakpoints, $bp) {
+    @media screen and ( min-width: map-get($breakpoints, $bp) ) {
+      @content;
+    }
+  } @else {
+    @media screen and ( min-width: $bp ) {
+      @content;
+    }
+  }
+}
+
+// Reset - <ul>
+@mixin ul-reset {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+
+// Reset - <a>
+@mixin a-reset {
+  text-decoration: none;
+}

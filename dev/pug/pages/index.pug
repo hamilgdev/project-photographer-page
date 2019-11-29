@@ -1,5 +1,23 @@
 extends ../templates/template.pug
 
-append header
-  
-  h1 Template workflow static page modular
+
+block header
+  include ../blocks/logo
+
+block nav
+  include ../blocks/menu
+
+block banner
+  include ../blocks/banner
+
+block section-gallery
+  include ../blocks/gallery
+
+block section-about
+  include ../blocks/about
+
+block section-contact
+  include ../blocks/contact
+
+block footer
+  include ../blocks/footer

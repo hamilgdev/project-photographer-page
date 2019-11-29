@@ -18,9 +18,24 @@ html(lang="es")
   body
     header(class="header")
       block header
-        
+
+      nav(class="nav")
+        block nav
+          
+      .banner-container
+        block banner
+
     main(class="main")
-      block main
+      
+      section(class="section-gallery")
+        block section-gallery
+
+      section(class="section-about")
+        block section-about
+
+      section(class="section-contact")
+        block section-contact
+
         
     footer(class="footer")
       block footer

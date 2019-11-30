@@ -1,1 +1,13 @@
 .section__title {text-align: center;}
+
+.section__description {
+  text-align: center;
+  margin-top: em(16px);
+  margin-bottom: em(16px);
+  
+  @include mq(l){
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

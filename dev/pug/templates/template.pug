@@ -14,31 +14,32 @@ html(lang="es")
     meta(name="description" content=pageDescription)
     title= `${pageTitle} - ${siteName}`
     link(rel="shortcut icon" href="./img/milton-code-favicon.png")
-    link(href="https://file.myfontastic.com/Ns2HUcFXczGjmjYCZGqbS4/icons.css" rel="stylesheet")
     link(rel="stylesheet" href="css/styles.css")
+    link(href="https://file.myfontastic.com/ZQRJCddF5YbYHR7h4zEoQT/icons.css" rel="stylesheet")
+    <link href="https://file.myfontastic.com/Ns2HUcFXczGjmjYCZGqbS4/icons.css" rel="stylesheet">
   body
-    header(class="header")
+    header(class="header  l-container--full")
       block header
 
-      nav(class="nav")
+      nav(class="nav  l-container")
         block nav
           
-      .banner-container
+      div(class=".banner-container  l-container--full")
         block banner
 
     main(class="main")
       
-      section(class="section-gallery")
+      section(class="section-gallery  l-container  l-section")
         block section-gallery
 
-      section(class="section-about")
+      section(class="section-about  l-container--full  l-section")
         block section-about
 
-      section(class="section-contact")
+      section(class="section-contact  l-container  l-section")
         block section-contact
 
         
-    footer(class="footer")
+    footer(class="footer  l-container--full")
       block footer
 
     script(src="js/scripts.js")

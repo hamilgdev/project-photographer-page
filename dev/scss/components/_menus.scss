@@ -1,7 +1,8 @@
 [class*="menu--"] {
-  @include ul-reset;
   text-align: center;
-
+  @include ul-reset;
+  margin-bottom: 2em;
+ 
   @include mq(l){
     display: flex;
     justify-content: space-around;
@@ -9,16 +10,40 @@
   }
 }
 
+
+.menu--main {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  @include var(border-color, primary);
+
+}
+
+.menu--gallery {
+
+  @include mq(l) {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .active {
+
+      &::after {
+        content: "";
+        display: block;
+        width: 140%;
+        height: 2px;
+        margin-left: -20%;
+        @include var(background-color, third);
+      }
+    }
+  }
+}
+
+
 .menu__link {
   @include a-reset;
   font-weight: $semibold;
   @include var(color, primary);
 
   &.active { @include var(color, third); }
-}
-
-.menu--main {
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  @include var(border-color, primary);
 }

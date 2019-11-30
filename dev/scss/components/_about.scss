@@ -1,0 +1,63 @@
+.section-about {
+  background-image: url(../img/about_info.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  clip-path: polygon(0 9%, 100% 0, 100% 91%, 0 100%);
+  padding: 3em 0;
+  position: relative;
+
+  .about {
+    width: 80%;
+    margin: 0 auto;
+
+    @include mq(l) {
+      display: flex;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      @include var(background-color, third);
+      opacity: .2;
+    }
+  
+    &__img {
+      display: none;
+      max-width: 50%;
+
+      @include mq(l) {
+        display: block;
+        opacity: .9;
+        max-width: 60%;
+
+      }
+    }
+  
+    &__description {
+      position: relative;
+      margin: 0 auto;
+      width: 80%;
+      padding: em(16px);
+      color: #fff;
+      background-color: rgba(#D4671F, .9);
+      @include font(smaller);
+      font-style: italic;
+  
+  
+      @include mq(l) {
+        @include font(small);
+        padding: em(24px);
+        margin-left: em(-16px);
+        width: 100%;
+        align-self: center;
+      }
+    } 
+
+  }
+ 
+}

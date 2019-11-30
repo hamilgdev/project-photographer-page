@@ -1,0 +1,9 @@
+.footer{
+
+  @include var(background-color, primary);
+  @include var(color, secondary);
+
+  a {
+    @include var(color, secondary);
+  }
+}

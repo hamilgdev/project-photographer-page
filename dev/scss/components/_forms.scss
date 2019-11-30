@@ -1,0 +1,35 @@
+[class*="form--"] {
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    line-height: 2.5;
+    padding-left: em(16px);
+    padding-right: em(16px);;
+  }
+}
+
+.form--contact {
+
+  @include mq(l) {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.form__item {
+  margin-bottom: em(32px);
+}
+
+.form__submit {
+  margin-bottom: em(32px);
+  padding: .2em .7em;
+  @include var(background-color, third);
+  cursor: pointer;
+  @include font(smaller);
+  color: #fff;
+  border: none;
+  font-family: 'Zilla Slab', serif;
+}

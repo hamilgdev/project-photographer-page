@@ -7,6 +7,11 @@
   padding-top: 5em;
   padding-bottom: 5em;
 
+  @include mq(l) {
+    padding-top: 9em;
+    padding-bottom: 9em;
+    }
+
   &::before {
     content: "";
     position: absolute;
@@ -22,10 +27,18 @@
     position: relative;
     text-align: center;
     color: #fff;
+
+    @include mq(l) {
+      text-align: left;
+    }
   }
 
   &__title{
     @include font(subtitle);
+
+    @include mq(l) {
+      @include font(title);
+    }
   }
 
   &__subtitle{
@@ -35,6 +48,13 @@
     padding: .5em 1em;
     opacity: .8;
     @include var(background-color, primary);
+
+    @include mq(l) {
+      margin-left: em(16px);
+      margin-right: 0;
+      padding: .7em 2em;
+      font-weight: $semibold;  
+    }
   }
 
 }

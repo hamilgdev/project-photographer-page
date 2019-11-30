@@ -3,21 +3,21 @@
   font-family: 'Nunito', sans-serif;
   font-family: 'Montserrat', sans-serif;
 */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab:400,500,700&display=swap');
 
 // tamaño de fuente tipografica 
 $fonts: (
-  title : em(42px),
-  subtitle : em(32px),
-  medium : em(24px),
-  base : em(16px),
-  small : em(12px),
-  smaller : em(10px)
+  title : em(48px),
+  subtitle : em(36px),
+  medium : em(28px),
+  base : em(22px),
+  small : em(16px),
+  smaller : em(12px)
 );
 
 // Font weigth
 $normal : 400;
-$semibold : 600;
+$semibold : 500;
 $bold : 700;
 
 
@@ -33,7 +33,7 @@ $bold : 700;
 
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Zilla Slab', serif;
   @include font(base);
 }
 

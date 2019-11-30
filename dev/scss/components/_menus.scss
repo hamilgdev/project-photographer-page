@@ -1,0 +1,24 @@
+[class*="menu--"] {
+  @include ul-reset;
+  text-align: center;
+
+  @include mq(l){
+    display: flex;
+    justify-content: space-around;
+    line-height: 3;
+  }
+}
+
+.menu__link {
+  @include a-reset;
+  font-weight: $semibold;
+  @include var(color, primary);
+
+  &.active { @include var(color, third); }
+}
+
+.menu--main {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  @include var(border-color, primary);
+}

@@ -8,7 +8,22 @@
 
 @import "base/base";
 
+// Layout
+@import "layout/layout";
+
 
 // Estilos theme
 
 @import "theme/typography";
+@import "theme/theme";
+
+
+// Components
+
+@import "components/banners";
+@import "components/forms";
+@import "components/galleries";
+@import "components/logo";
+@import "components/menus";
+@import "components/sections";
+
